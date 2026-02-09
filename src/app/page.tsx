@@ -2,6 +2,7 @@
 
 import * as React from "react";
 import { useTheme } from "next-themes";
+import Link from "next/link";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -57,7 +58,9 @@ export default function Home() {
             <Label htmlFor="demo-input">Try typing something</Label>
             <Input id="demo-input" placeholder="Hello from shadcn/ui..." />
           </div>
-          <Button className="w-full">Get Started</Button>
+          <Button asChild className="w-full">
+            <Link href="/components">Get Started</Link>
+          </Button>
         </CardContent>
       </Card>
     </main>
