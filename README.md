@@ -1,5 +1,7 @@
 # Cursor Workshop — Starter Repo
 
+[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https://github.com/akhiroshima/cursor-workshop&env=NEXT_PUBLIC_SUPABASE_URL,NEXT_PUBLIC_SUPABASE_ANON_KEY&envDescription=Supabase%20project%20credentials&envLink=https://supabase.com/dashboard/project/_/settings/api)
+
 Everything you need to start building with Cursor. Clone, install, set two env vars, run.
 
 ## Prerequisites
@@ -7,6 +9,7 @@ Everything you need to start building with Cursor. Clone, install, set two env v
 - **Node.js 18+** — check with `node -v`
 - **npm** (comes with Node) — or pnpm/yarn if you prefer
 - **A free Supabase account** — sign up at [supabase.com](https://supabase.com)
+- **A free Vercel account** — sign up at [vercel.com](https://vercel.com)
 
 ## Quick Start
 
@@ -94,6 +97,28 @@ src/
       client.ts       ← Supabase browser client
     utils.ts          ← Utility functions (cn helper)
 ```
+
+## Deploy to Vercel
+
+You can deploy this repo to Vercel in a few minutes. Two options:
+
+### Option A — One-click deploy (recommended)
+
+1. Click the **Deploy with Vercel** button at the top of this README.
+2. Sign in with GitHub and select the repo.
+3. When prompted, add:
+   - `NEXT_PUBLIC_SUPABASE_URL`
+   - `NEXT_PUBLIC_SUPABASE_ANON_KEY`
+4. Click **Deploy**.
+
+### Option B — Manual deploy from Vercel dashboard
+
+1. Go to [vercel.com/new](https://vercel.com/new).
+2. Import the `cursor-workshop` GitHub repo.
+3. Add the two environment variables under **Project Settings → Environment Variables**.
+4. Deploy.
+
+Once deployed, you'll get a URL like `https://your-project.vercel.app`. If you update env vars later, redeploy to apply changes.
 
 ## Scripts
 
