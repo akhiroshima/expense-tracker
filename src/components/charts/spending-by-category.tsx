@@ -59,7 +59,7 @@ export function SpendingByCategory({ expenses }: SpendingByCategoryProps) {
           ))}
         </Pie>
         <Tooltip
-          formatter={(value: number) => [`$${value.toFixed(2)}`, "Amount"]}
+          formatter={(value: number | undefined) => [`$${(value ?? 0).toFixed(2)}`, "Amount"]}
           contentStyle={{
             borderRadius: "8px",
             border: "1px solid hsl(var(--border))",

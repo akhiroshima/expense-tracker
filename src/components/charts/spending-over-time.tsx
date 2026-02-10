@@ -92,7 +92,7 @@ export function SpendingOverTime({ expenses }: SpendingOverTimeProps) {
               tickFormatter={(v) => `$${v}`}
             />
             <Tooltip
-              formatter={(value: number) => [`$${value.toFixed(2)}`, "Total"]}
+              formatter={(value: number | undefined) => [`$${(value ?? 0).toFixed(2)}`, "Total"]}
               contentStyle={{
                 borderRadius: "8px",
                 border: "1px solid hsl(var(--border))",
