@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import { ThemeProvider } from "@/components/theme-provider";
+import { Nav } from "@/components/nav";
 import { Toaster } from "@/components/ui/sonner";
 import "./globals.css";
 
@@ -15,8 +16,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cursor Workshop",
-  description: "Starter repo for the Cursor workshop",
+  title: "Expense Tracker",
+  description: "Track and categorize your expenses with voice input",
 };
 
 export default function RootLayout({
@@ -30,7 +31,8 @@ export default function RootLayout({
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <ThemeProvider attribute="class" defaultTheme="dark" enableSystem={false}>
-          {children}
+          <Nav />
+          <main className="min-h-[calc(100vh-3.5rem)]">{children}</main>
           <Toaster />
         </ThemeProvider>
       </body>
